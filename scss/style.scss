@@ -57,9 +57,11 @@ p{
     margin: 10px 0;
 }
 
-//?============= (max-width: 450px) =============
+//?============= (max-width: 500px) =============
 @media (max-width: 499.98px){
     .collapse-button {
-        display: grid;
+        display: flex;
+        flex: column;
+        // grid-template-columns:none
     }
 }

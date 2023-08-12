@@ -163,7 +163,11 @@ p {
 
 @media (max-width: 499.98px) {
   .collapse-button {
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: column;
+        -ms-flex: column;
+            flex: column;
   }
 }

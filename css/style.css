@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* /*Обнуление - Кросбраузерность*/
+/* очищаем все отступы и границы */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Меняем подсчет ширины блока для удобвства верстки*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Убираем линии обводки у некоторых браузеров */
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/* перечисляем теги и делаем их блочными */
+nav, footer, header, aside {
+  display: block;
+}
+
+/* Уравниваем поведение элементов и шрифтов для разных браузеров, в том числе запрещаем самовольное увеличение шрифта */
+html, body { /* height:100%;width:100%; */
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* обращаемся к тегам и заставляем их наследовать свойства шрифта*/
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*убираем некоторые особенности некоторых браузеров (н: крестик в поле ввода текста в браузере iExplorer)*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*Для браузера FireFox - убирает лишние пробелы и отступы в кнопках*/
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*Обнуляем все заголовки*/
+/*--------------------*/
+html, body {
+  font-family: sans-serif;
+  background: #F4FE5C;
+}
+@media (max-width: 767px) {
+  html, body {
+    font-size: calc(12px + 10.2 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  html, body {
+    font-size: calc(12px + 10.2 * (100vw / 1920));
+  }
+}
+
+button {
+  background: rgba(177, 30, 99, 0.8470588235);
+  color: #fff;
+  outline: none;
+  border: 2px solid #A3004D;
+  border-radius: 8px;
+  padding: 8px 15px;
+  -webkit-box-shadow: 4px 4px grey;
+          box-shadow: 4px 4px grey;
+  -webkit-transition: all ease 0.15s;
+  transition: all ease 0.15s;
+}
+@media (max-width: 767px) {
+  button {
+    font-size: calc(14px + 10.2 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  button {
+    font-size: calc(14px + 10.2 * (100vw / 1920));
+  }
+}
+button:hover {
+  background: #A3004D;
+}
+button:active {
+  -webkit-box-shadow: 2px 2px grey;
+          box-shadow: 2px 2px grey;
+  background: #F358A1;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.contains {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.collapse {
+  display: -ms-grid;
+  display: grid;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  padding: 10px;
+}
+.collapse.hide {
+  -ms-grid-rows: 0fr;
+  grid-template-rows: 0fr;
+  padding: 0px;
+}
+
+.collapse > div {
+  overflow: hidden;
+}
+
+.bg-fon {
+  background: rgba(139, 99, 233, 0.7882352941);
+  border-radius: 8px;
+  margin: 10px 0;
+}

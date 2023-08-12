@@ -1,6 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Roboto:wght@300&display=swap');
-// font-family: 'Noto Sans', sans-serif;
-// font-family: 'Roboto', sans-serif;
+
 // ======================================
 @import "./_nullstyle.scss";
 @import "./_vars.scss";
@@ -10,6 +8,7 @@ html, body{
     @include adaptiv-font(18, 12);
     font-family: sans-serif;
     background: $fon;
+    margin: 10px;
 }
 
 button {
@@ -22,6 +21,7 @@ button {
     padding: 8px 15px;
     box-shadow: 4px 4px grey;
     transition: all ease .15s;
+    margin: 0 15px 15px 0;
     &:hover {
         background: $but-hover;
         // box-shadow: 4px 4px grey;
@@ -55,4 +55,11 @@ p{
     background: $bg-fon;
     border-radius: 8px;
     margin: 10px 0;
+}
+
+//?============= (max-width: 450px) =============
+@media (max-width: 449.98px){
+    .collapse-button {
+        display: grid;
+    }
 }
